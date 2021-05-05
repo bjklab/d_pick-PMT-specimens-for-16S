@@ -91,3 +91,60 @@ dat_choice %>%
   write_csv("./tabs/extra_PMT_donor_specimens_for_16S.csv")
 
 
+
+#' revise selection of specimens given limited to only 32 additional specimens: remove Donor 1, add 1 each from donors 16 & 22 (longest duration) 
+dat %>%
+  filter(external_participant_id %in% paste0("Donor ", c("005", "016", "022", "034", "038"))) %>%
+  select(external_participant_id, sample, sample_type, collection_date, status, location) %>%
+  distinct() %>% 
+  filter(grepl("CHOP",location) == FALSE & !is.na(location)) %>% #remove if already transferred to CHOP
+  add_count(external_participant_id, name = "specimen_count") %>%
+  mutate(first_last_vector = map(.x = specimen_count, .f = ~ c(1,unique(.x)))) %>%
+  mutate(middle_vector = map(.x = specimen_count / 5, .f = ~ round(c(.x, .x*2, .x*3, .x*4)))) %>%
+  mutate(slice_vector = map2(.x = first_last_vector, .y = middle_vector, .f = ~ c(.x,.y))) %>%
+  #View()
+  group_by(external_participant_id) %>%
+  nest(-contains("vector")) %>%
+  map2(.x = .$data, .y = .$slice_vector, .f = ~ slice(.data = .x, .y)) %>%
+  bind_rows() %>%
+  ungroup() %>%
+  identity() -> dat_choice2
+
+dat_choice2
+
+
+dat %>%
+  filter(!sample %in% dat_choice2$sample) %>%
+  filter(external_participant_id %in% paste0("Donor ", c("016", "022"))) %>%
+  select(external_participant_id, sample, sample_type, collection_date, status, location) %>%
+  distinct() %>% 
+  filter(grepl("CHOP",location) == FALSE & !is.na(location)) %>% #remove if already transferred to CHOP
+  add_count(external_participant_id, name = "specimen_count") %>%
+  mutate(first_last_vector = map(.x = specimen_count, .f = ~ c(1,unique(.x)))) %>%
+  mutate(middle_vector = map(.x = specimen_count / 2, .f = ~ round(c(.x)))) %>%
+  mutate(slice_vector = map2(.x = first_last_vector, .y = middle_vector, .f = ~ c(.x,.y))) %>%
+  #View()
+  group_by(external_participant_id) %>%
+  nest(-contains("vector")) %>%
+  map2(.x = .$data, .y = .$middle_vector, .f = ~ slice(.data = .x, .y)) %>%
+  bind_rows() %>%
+  ungroup() %>%
+  bind_rows(dat_choice2) %>%
+  arrange(external_participant_id, collection_date) %>%
+  identity() -> dat_choice3
+
+dat_choice3
+  
+
+
+
+dat_choice3 %>%
+  count(external_participant_id)
+
+dat_choice3 %>%
+  select(-specimen_count) %>%
+  write_csv("./tabs/extra_PMT_donor_specimens_for_16S_revised.csv")
+
+
+
+
