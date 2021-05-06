@@ -147,4 +147,44 @@ dat_choice3 %>%
 
 
 
+#' replace two alread-sequenced donor 5 specimens
+
+dat_choice3 %>%
+  mutate(date = as.Date(collection_date)) %>%
+  ggplot(data = .) + geom_point(aes(x = date, y = external_participant_id))
+
+
+dat %>%
+  filter(!sample %in% dat_choice3$sample) %>%
+  filter(external_participant_id %in% paste0("Donor ", c("016", "022"))) %>%
+  select(external_participant_id, sample, sample_type, collection_date, status, location) %>%
+  distinct() %>% 
+  filter(grepl("CHOP",location) == FALSE & !is.na(location)) %>% #remove if already transferred to CHOP
+  add_count(external_participant_id, name = "specimen_count") %>%
+  mutate(first_last_vector = map(.x = specimen_count, .f = ~ c(1,unique(.x)))) %>%
+  mutate(middle_vector = map(.x = specimen_count / 3, .f = ~ round(c(.x)))) %>%
+  mutate(slice_vector = map2(.x = first_last_vector, .y = middle_vector, .f = ~ c(.x,.y))) %>%
+  #View()
+  group_by(external_participant_id) %>%
+  nest(-contains("vector")) %>%
+  map2(.x = .$data, .y = .$slice_vector, .f = ~ slice(.data = .x, .y)) %>%
+  bind_rows() %>%
+  slice_tail(n = 1) %>%
+  ungroup() %>%
+  bind_rows(dat_choice3) %>%
+  arrange(external_participant_id, collection_date) %>%
+  identity() -> dat_choice4
+
+dat_choice4 %>%
+  count(external_participant_id)
+
+
+dat_choice4 %>%
+  mutate(date = as.Date(collection_date)) %>%
+  ggplot(data = .) + geom_point(aes(x = date, y = external_participant_id), shape = 21)
+
+
+dat_choice4 %>%
+  select(-specimen_count) %>%
+  write_csv("./tabs/FINAL_34_extra_PMT_donor_specimens_for_16S_revised.csv")
 
