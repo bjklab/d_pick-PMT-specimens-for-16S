@@ -1,0 +1,39 @@
+external_participant_id,sample,sample_type,collection_date,status,location
+Donor 005,S-201028-03487,Stool Swab,2020-10-28T13:24:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/G5
+Donor 005,S-201030-00948,Stool Swab,2020-10-30T13:59:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/H3
+Donor 005,S-201117-02788,Stool Swab,2020-11-17T10:27:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/J1
+Donor 005,S-201201-02617,Stool Swab,2020-12-01T13:53:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/J8
+Donor 005,S-201214-03300,Stool Swab,2020-12-14T14:00:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/A3
+Donor 005,S-201217-01195,Stool Swab,2020-12-17T15:27:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/A8
+Donor 016,S-191120-04597,Stool Swab,2019-11-20T17:17:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/A5
+Donor 016,S-191212-00368,Stool Swab,2019-12-12T18:00:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/D3
+Donor 016,S-200108-00520,Stool Swab,2020-01-08T12:55:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/F4
+Donor 016,S-200115-00848,Stool Swab,2020-01-15T12:31:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/I4
+Donor 016,S-200129-00512,Stool Swab,2020-01-29T12:22:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00027274/B9
+Donor 016,S-200211-00198,Stool Swab,2020-02-11T13:20:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00027274/E3
+Donor 016,S-200228-00979,Stool Swab,2020-02-28T11:56:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00027274/I10
+Donor 016,S-200313-00202,Stool Swab,2020-03-13T15:16:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/D2
+Donor 022,S-191217-00931,Stool Swab,2019-12-17T16:30:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/D10
+Donor 022,S-200114-00851,Stool Swab,2020-01-14T13:33:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/H7
+Donor 022,S-200122-00361,Stool Swab,2020-01-22T12:42:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00023739/J8
+Donor 022,S-200127-00678,Stool Swab,2020-01-27T13:44:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00027274/B1
+Donor 022,S-200204-00438,Stool Swab,2020-02-04T13:18:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00027274/C8
+Donor 022,S-200218-00369,Stool Swab,2020-02-18T13:16:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/BX-00027274/E9
+Donor 022,S-200304-00509,Stool Swab,2020-03-04T10:58:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/A2
+Donor 022,S-200925-00532,Stool Swab,2020-09-25T12:02:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 3/E8
+Donor 034,S-210225-01206,Stool Swab,2021-02-25T11:21:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/B7
+Donor 034,S-210309-01469,Stool Swab,2021-03-09T11:39:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/E1
+Donor 034,S-210317-01566,Stool Swab,2021-03-17T10:52:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/F9
+Donor 034,S-210323-01157,Stool Swab,2021-03-23T10:52:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/H2
+Donor 034,S-210407-01249,Stool Swab,2021-04-07T10:59:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/B4
+Donor 034,S-210412-01894,Stool Swab,2021-04-12T11:46:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/C7
+Donor 034,S-210421-01771,Stool Swab,2021-04-21T10:41:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/E9
+Donor 034,S-210503-01787,Stool Swab,2021-05-03T11:52:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/I2
+Donor 038,S-210304-01338,Stool Swab,2021-03-04T10:52:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/D1
+Donor 038,S-210309-00775,Stool Swab,2021-03-09T09:22:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/D10
+Donor 038,S-210318-01049,Stool Swab,2021-03-18T09:13:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/G2
+Donor 038,S-210322-01202,Stool Swab,2021-03-22T09:26:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 4/G8
+Donor 038,S-210412-01096,Stool Swab,2021-04-12T10:59:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/C6
+Donor 038,S-210413-01490,Stool Swab,2021-04-13T10:28:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/D2
+Donor 038,S-210428-01935,Stool Swab,2021-04-28T10:34:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/G8
+Donor 038,S-210503-01766,Stool Swab,2021-05-03T10:00:00Z,In Circulation,/InfDisease FMT -80/Shelf4/Row1/PMT_Raw Stool Swabs 5/H8
